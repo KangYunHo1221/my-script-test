@@ -7,10 +7,12 @@
   <script type="text/javascript">
     const button1 = document.querySelector(".myButton1");
     button1.addEventListener("click", () => {
+      console.log("false", tossAppBridge);
       tossAppBridge.setVisible(false);
     });
     const button2 = document.querySelector(".myButton2");
     button2.addEventListener("click", () => {
+      console.log("true", tossAppBridge);
       tossAppBridge.setVisible(true);
     });
   </script>
