@@ -22,8 +22,9 @@
         tossAppBridge.setVisibleCTA(true);
       });
       const button3 = document.querySelector(".myButton3");
-      button1.addEventListener("click", () => {
-        window.postMessage({name:"extraRegistration", url:"https://123"});
+      button3.addEventListener("click", () => {
+        console.log("pressed", window.postMessage, JSON.stringify({name:"extraRegistration", url:"https://123"}));
+        window.postMessage(JSON.stringify({name:"extraRegistration", url:"https://123"}));
       });
     </script>
   </body>
