@@ -9,6 +9,7 @@
     <button class="myButton1" style="font-size: 40px; border-radius: 10px; padding: 15px">setvisible = false</button>
     <button class="myButton2" style="font-size: 40px; border-radius: 10px; padding: 15px">setvisible = true</button>
     <button class="myButton3" style="font-size: 40px; border-radius: 10px; padding: 15px">postMessage</button>
+    <button class="myButton4" style="font-size: 40px; border-radius: 10px; padding: 15px">postMessage wo stringfy</button>
     <script src="toss-appbridge.js"></script>
     <script type="text/javascript">
       const button1 = document.querySelector(".myButton1");
@@ -25,6 +26,10 @@
       button3.addEventListener("click", () => {
         console.log("pressed", window.postMessage, JSON.stringify({name:"extraRegistration", url:"https://123"}));
         window.postMessage(JSON.stringify({name:"extraRegistration", url:"https://123"}));
+      });
+      const button4 = document.querySelector(".myButton4");
+      button4.addEventListener("click", () => {
+        window.postMessage({name:"extraRegistration", url:"https://345"});
       });
     </script>
   </body>
