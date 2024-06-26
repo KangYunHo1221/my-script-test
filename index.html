@@ -24,12 +24,13 @@
       });
       const button3 = document.querySelector(".myButton3");
       button3.addEventListener("click", () => {
-        const nextUrl = "supertoss://m/insurance-ads/product/token-bridge?insuType=pet&insurer=MERITZ_DIRECT&outlink=http%3A%2F%2Fmstore.meritzfire.com%2FDPP2405CA000010%2Fsoutheaster.do%20"
-        tossAppBridge.closeWebView({nextUrl:nextUrl});
+        const urlString = "supertoss://m/insurance-ads/product/token-bridge?insuType=pet&insurer=MERITZ_DIRECT&outlink=http%3A%2F%2Fmstore.meritzfire.com%2FDPP2405CA000010%2Fsoutheaster.do%20"
+        tossAppBridge.closeWebView({nextUrl:urlString});
       });
       const button4 = document.querySelector(".myButton4");
       button4.addEventListener("click", () => {
-        window.postMessage({name:"extraRegistration", url:"https://345"});
+        const urlString = "supertoss://m/insurance-ads/product/token-bridge?insuType=pet&insurer=MERITZ_DIRECT&outlink=http%3A%2F%2Fmstore.meritzfire.com%2FDPP2405CA000010%2Fsoutheaster.do%20"
+        tossAppBridge.close({nextUrl:urlString});
       });
     </script>
   </body>
