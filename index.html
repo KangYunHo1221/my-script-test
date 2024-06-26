@@ -9,7 +9,7 @@
     <button class="myButton1" style="font-size: 40px; border-radius: 10px; padding: 15px">setvisible = false</button>
     <button class="myButton2" style="font-size: 40px; border-radius: 10px; padding: 15px">setvisible = true</button>
     <button class="myButton3" style="font-size: 40px; border-radius: 10px; padding: 15px">closeWebView</button>
-    <button class="myButton4" style="font-size: 40px; border-radius: 10px; padding: 15px">postMessage wo stringfy</button>
+    <button class="myButton4" style="font-size: 40px; border-radius: 10px; padding: 15px">postMessage</button>
     <script src="toss-appbridge.js"></script>
     <script type="text/javascript">
       const button1 = document.querySelector(".myButton1");
@@ -29,8 +29,7 @@
       });
       const button4 = document.querySelector(".myButton4");
       button4.addEventListener("click", () => {
-        const urlString = "supertoss://m/insurance-ads/product/token-bridge?insuType=pet&insurer=MERITZ_DIRECT&outlink=http%3A%2F%2Fmstore.meritzfire.com%2FDPP2405CA000010%2Fsoutheaster.do%20"
-        tossAppBridge.close({nextUrl:urlString});
+        window.postMessage(JSON.stringify({name:"extraRegistration", url:"https://123"}));
       });
     </script>
   </body>
