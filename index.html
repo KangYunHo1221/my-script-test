@@ -11,6 +11,7 @@
     <button class="myButton3" style="font-size: 40px; border-radius: 10px; padding: 15px">closeWebView</button>
     <button class="myButton4" style="font-size: 40px; border-radius: 10px; padding: 15px">postMessage</button>
     <button class="myButton5" style="font-size: 40px; border-radius: 10px; padding: 15px">route</button>
+    <button class="myButton6" style="font-size: 40px; border-radius: 10px; padding: 15px">testButton</button>
     <script src="toss-appbridge.js"></script>
     <script type="text/javascript">
       const button1 = document.querySelector(".myButton1");
@@ -35,6 +36,12 @@
       const button5 = document.querySelector(".myButton5");
       button5.addEventListener("click", () => {
         window.location.href = 'supertoss://m/insurance-ads/test';
+      });
+      const button6 = document.querySelector(".myButton6");
+      button6.addEventListener("click", () => {
+        window.ReactNativeWebView.postMessage(JSON.stringify({
+          "name": "testing",
+      }))
       });
     </script>
   </body>
