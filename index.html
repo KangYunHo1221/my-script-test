@@ -12,6 +12,7 @@
     <button class="myButton4" style="font-size: 40px; border-radius: 10px; padding: 15px">postMessage</button>
     <button class="myButton5" style="font-size: 40px; border-radius: 10px; padding: 15px">route</button>
     <button class="myButton6" style="font-size: 40px; border-radius: 10px; padding: 15px">extraRegistrationMessage</button>
+    <button class="myButton7" style="font-size: 40px; border-radius: 10px; padding: 15px">popup open</button>
     <script src="toss-appbridge.js"></script>
     <script type="text/javascript">
       const button1 = document.querySelector(".myButton1");
@@ -43,6 +44,10 @@
           "name": "extraRegistration",
           "url": ""
       }))
+      });
+      const button7 = document.querySelector(".myButton7");
+      button7.addEventListener("click", () => {
+        window.open("/popup.html", "PopupWin", "width=500,height=600");
       });
     </script>
   </body>
