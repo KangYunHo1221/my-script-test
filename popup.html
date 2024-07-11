@@ -7,11 +7,17 @@
   <body topmargin="0" leftmargin="0" style="overflow: hidden">
     <h1 style="font-size: 100px">팝업화면</h1>
     <button class="myButton1" style="font-size: 40px; border-radius: 10px; padding: 15px">closeButton</button>
+    <button class="myButton1" style="font-size: 40px; border-radius: 10px; padding: 15px">self.close</button>
     <script src="toss-appbridge.js"></script>
     <script type="text/javascript">
       const button1 = document.querySelector(".myButton1");
       button1.addEventListener("click", () => {
         window.close();
+      });
+      const button1 = document.querySelector(".myButton1");
+      button1.addEventListener("click", () => {
+        self.opener = self;
+        self.close();
       });
     </script>
   </body>
